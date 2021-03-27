@@ -8,8 +8,8 @@ import { MyWorker, MyWorkerType } from 'src/app/shared/worker.model';
 })
 export class AddformWorkerComponent implements OnInit {
 
-  name: string;
-  surname: string;
+  name: '';
+  surname: '';
   type = 0;
   MyWorkerType = MyWorkerType;
 
@@ -22,12 +22,17 @@ export class AddformWorkerComponent implements OnInit {
 
   onAddWorker()
   {
-    let worker: MyWorker =
+    if (this.name !== '' && this.surname !== '')
     {
-      name: this.name,
-      surname: this.surname,
-      type: this.type,
-    };
-    this.addWorker.emit(worker);
+      this.addWorker.emit({
+        name: this.name,
+        surname: this.surname,
+        type: this.type,
+      });
+    }
+    else
+    {
+      alert('Поля "Имя" и "Фамилия" не должны быть пусты!');
+    }
   }
 }
