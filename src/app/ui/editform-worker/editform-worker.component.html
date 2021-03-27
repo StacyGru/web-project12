@@ -1,0 +1,35 @@
+<div class="row mb-3">
+    <div class="col-12">
+        <h5>Редактировать сотрудника</h5>
+    </div>
+    <div class="col-4">
+        <input type="text" class="form-control" placeholder="Имя"
+        [(ngModel)]="name">
+    </div>
+    <div class="col-4">
+        <input type="text" class="form-control" placeholder="Фамилия"
+        [(ngModel)]="surname">
+    </div>
+
+    <div class="col-4">
+        <select class="custom-select"
+        [(ngModel)]="type">
+            <option [ngValue]="MyWorkerType.programmer">Программист</option>
+            <option [ngValue]="MyWorkerType.designer">Дизайнер</option>
+            <option [ngValue]="MyWorkerType.copywriter">Рекламщик</option>
+            <option [ngValue]="MyWorkerType.manager">Менеджер</option>
+        </select>
+    </div>
+    
+    <div class="col-4 mt-2">
+        <button class="btn btn-outline-warning btn-sm"
+        (click)="onEditWorker()"
+        >Сохранить</button>
+    </div>
+    <div class="col-4 mt-2">
+        <button class="btn btn-outline-secondary btn-sm"
+        (click)="closeEdit()"
+        >Отмена</button>
+    </div>
+
+</div>

@@ -2,13 +2,14 @@
     <div class="col-12">
       <h5>{{ title }}</h5>
     </div>
-    <table class="table" [style.width]="'60%'">
+    <table class="table" [style.width]="''">
         <thead>
         <tr>
-            <th scope="col" [style.width]="'50px'">id</th>
-            <th scope="col" [style.width]="'200px'">Имя</th>
-            <th scope="col" [style.width]="'200px'">Фамилия</th>
-            <th scope="col" [style.width]="'50px'"></th>
+            <th scope="col" [style.width]="'10%'">id</th>
+            <th scope="col" [style.width]="'30%'">Имя</th>
+            <th scope="col" [style.width]="'30%'">Фамилия</th>
+            <th scope="col" [style.width]="'15%'"></th>
+            <th scope="col" [style.width]="'15%'"></th>
         </tr>
         </thead>
         <tbody>
@@ -18,7 +19,11 @@
             <td>{{ worker.name }}</td>
             <td>{{ worker.surname }}</td>
             <td><button (click)="onDeleteWorker(worker.id)"
-                class="btn btn-outline-danger btn-sm">Удалить</button></td>
+                class="btn btn-outline-danger btn-sm">Удалить</button> 
+            </td>
+            <td><button (click)="onEditWorker(worker.id)"
+                class="btn btn-outline-primary btn-sm">Редактировать</button>
+            </td>
         </tr>
         
         </tbody>

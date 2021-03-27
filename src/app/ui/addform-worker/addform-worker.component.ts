@@ -8,8 +8,9 @@ import { MyWorker, MyWorkerType } from 'src/app/shared/worker.model';
 })
 export class AddformWorkerComponent implements OnInit {
 
-  name: '';
-  surname: '';
+  id: number;
+  name: string;
+  surname: string;
   type = 0;
   MyWorkerType = MyWorkerType;
 

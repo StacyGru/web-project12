@@ -1,9 +1,9 @@
 export interface MyWorker
 {
+    id?: number;
     name: string;
     surname: string;
-    type: number;
-    id?: number;
+    type: number; 
 }
 
 export enum MyWorkerType
